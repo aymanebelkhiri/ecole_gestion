@@ -17,8 +17,6 @@
         width: 1000px;
         margin: auto;
         text-align: center;
-        height: 53vh;
-        overflow: scroll;
     }
 </style>
 

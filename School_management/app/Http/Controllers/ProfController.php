@@ -47,28 +47,36 @@ class ProfController extends Controller
         $Module = Module::findOrFail($request['module']);;
         $grp = Groupe::findOrFail($request['grp']);
         $filiere = Filiére::where("Nom",$request['filiere'])->first();
-        $user = User::create([
-            'name' => $request['nom'],
-            'email' => $request['email'],
-            'password' => Hash::make($request['password']),
-            'role' => $request['role'],
-        ]);
-        $NewProf = Prof::create([
-            "id_prof"=>$user->id,
-            'Nom'=>$request->nom,
-            'Email'=>$request->email,
-            'Sexe'=>$request->sexe,
-            'Module'=>$Module->id_module,
-            'Password'=>Hash::make($request['password'])
-        ]);
-        $groupe_prof = groupe_Prof::create([
-            'Groupe' => $grp->id_groupe,
-            'Prof' =>$user->id,
-        ]);
-        $filiere_prof = FiliéresProf::create([
-            'id_filiére' => $filiere->id,
-            'id_prof' =>$user->id,
-        ]);
+        // Création et sauvegarde de l'utilisateur
+        $user = new User();
+        $user->name = $request['nom'];
+        $user->email = $request['email'];
+        $user->password = Hash::make($request['password']);
+        $user->role = "profs";
+        $user->save();
+
+        // Création et sauvegarde du prof
+        $NewProf = new Prof();
+        $NewProf->id_prof = $user->id;
+        $NewProf->Nom = $request->nom;
+        $NewProf->Email = $request->email;
+        $NewProf->Sexe = $request->sexe;
+        $NewProf->Module = $Module->id_module;
+        $NewProf->Password = Hash::make($request['password']);
+        $NewProf->save();
+
+        // Création et sauvegarde du groupe prof
+        $groupe_prof = new groupe_Prof();
+        $groupe_prof->Groupe = $grp->id_groupe;
+        $groupe_prof->Prof = $user->id;
+        $groupe_prof->save();
+
+        // Création et sauvegarde de la filière du prof
+        $filiere_prof = new FiliéresProf();
+        $filiere_prof->id_filiére = $filiere->id;
+        $filiere_prof->id_prof = $user->id;
+        $filiere_prof->save();
+
         
         if($NewProf){
             return redirect()->route('profs.index')->with('success', 'Étudiant ajouté avec succès');

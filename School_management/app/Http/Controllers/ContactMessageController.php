@@ -9,7 +9,7 @@ class ContactMessageController extends Controller
 {
     // admin mapping 
     public function getMessage (){
-        $contact=ContactMessage::all();
+        $contact = ContactMessage::orderBy('created_at', 'desc')->get();
         return view ('admin.contactAdmin.index',compact('contact'));
     }
     public function store(Request $request)

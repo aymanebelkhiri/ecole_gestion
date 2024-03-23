@@ -21,7 +21,7 @@ $messages = MessageProf::where('Prof', Auth::user()->id)
         width: 1000px;
         margin: auto;
         text-align: center;
-        height: 53vh;
+        height: 67vh;
         overflow: scroll;
     }
 </style>

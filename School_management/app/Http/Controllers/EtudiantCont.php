@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Mail\editetudiant;
+use App\Models\Absence_etudiant;
 use App\Models\Admin;
 use App\Models\Etudiant;
+use App\Models\MessageProf;
+use App\Models\MessageSecretary;
+use App\Models\Note;
 use App\Models\Prof;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -114,6 +118,10 @@ class EtudiantCont extends Controller
     
         $user=User::findOrFail($id_abs);
         $user->delete();
+        $DeleteAbscence = Absence_etudiant::where("Etudiant",$id)->delete();
+        $DeleteMessageProf = MessageProf::where("Etudiant",$id)->delete();
+        $DeleteMessageSec = MessageSecretary::where("Etudiant",$id)->delete();
+        $DeleteNote = Note::where("Etudiant",$id)->delete();
         $Etudiant=Etudiant::where("id_etudiant",$id)->first();
         $Etudiant->delete();
         return view("admin.etudiants.liste",['data' => $data,"success"=>"Student deleted Successfuly."]);

@@ -12,6 +12,6 @@ class HomeAdminController extends Controller
     public function index()
     {
         // Mettez ici la logique pour afficher la page des administrateurs
-        return view('admin.home');
+        return route('Events');
     }
 }
