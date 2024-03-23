@@ -13,8 +13,8 @@
             padding: 10px;
             padding-top:0px ;
             background-color: #222e47;
-            height: 75vh;
-            overflow: hidden;
+            
+            
             font-family:Arial, Helvetica, sans-serif;
             width: 250px;
             box-sizing: border-box;

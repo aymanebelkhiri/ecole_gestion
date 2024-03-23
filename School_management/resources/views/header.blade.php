@@ -37,7 +37,7 @@ https://templatemo.com/tm-557-grad-school
         }
         body {
           height: 100vh;
-          overflow: hidden;
+          
         }
 .modal {
     display: none; /* Hidden by default */

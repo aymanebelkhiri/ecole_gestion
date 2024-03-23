@@ -1,23 +1,22 @@
-@extends('layouts.app')
+@if(auth()->check())
+    @if(auth()->user()->role === 'etudiants')
+        <a id="redirectLink" class="btn" href="{{ route('etudiant') }}">Login</a>
+    @elseif(auth()->user()->role === 'admin')
+        <a id="redirectLink" class="btn" href="{{ route('admin') }}">Login</a>
+    @elseif(auth()->user()->role === 'profs')
+        <a id="redirectLink" class="btn" href="{{ route('prof') }}">Login</a>
+    @endif
+@endif
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<script defer>
+    function clickLinkAfterDelay() {
+        var link = document.getElementById('redirectLink');
+        if (link) {
+            setTimeout(function() {
+                link.click();
+            }, 1); 
+        }
+    }
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+    clickLinkAfterDelay();
+</script>

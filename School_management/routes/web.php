@@ -45,6 +45,9 @@ Route::get('/', function () {
     return view('index');
 })->name("home");
 
+Route::get('/l', function () {
+    return view('home');
+})->name("home2");
 
 
 //-----------------------------aymane------------------------------

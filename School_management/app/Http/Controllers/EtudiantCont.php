@@ -34,27 +34,27 @@ class EtudiantCont extends Controller
      */
     public function store(Request $data)
     {
-        $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']), // Assurez-vous de hasher le mot de passe
-            'role' => $data['role'],
-        ]);
-    
+        $user = new User();
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        $user->password = Hash::make($data['password']);
+        $user->role = "etudiants";
+        $user->save();
+        
         if ($data['role'] === 'etudiants') {
-            Etudiant::create([
-                'id_etudiant' => $user->id, // Utilisation de l'ID de l'utilisateur comme clé primaire
-                'Matricule' => $data['matricule'],
-                'Nom' => $data['name'],
-                'Prenom' => "", // Assurez-vous de spécifier une valeur pour chaque colonne non nullable
-                'DateNaissance' => $data['date'],
-                'Sexe' => $data['sexe'], // Assurez-vous de spécifier une valeur pour chaque colonne non nullable
-                'Email' => $data['email'],
-                'Password' => Hash::make($data['password']), // Assurez-vous de hasher le mot de passe
-                'Age' => $data['age'],
-                'Groupe' => $data["grp"],
-            ]);
-        } 
+            $etudiant = new Etudiant();
+            $etudiant->id_etudiant = $user->id;
+            $etudiant->Matricule = $data['matricule'];
+            $etudiant->Nom = $data['name'];
+            $etudiant->Prenom = ""; // Assurez-vous de spécifier une valeur pour chaque colonne non nullable
+            $etudiant->DateNaissance = $data['date'];
+            $etudiant->Sexe = $data['sexe']; // Assurez-vous de spécifier une valeur pour chaque colonne non nullable
+            $etudiant->Email = $data['email'];
+            $etudiant->Password = Hash::make($data['password']); // Assurez-vous de hasher le mot de passe
+            $etudiant->Age = $data['age'];
+            $etudiant->Groupe = $data["grp"];
+            $etudiant->save();
+        }        
         return view("admin.etudiants.liste",['data' => $data->input(),"success"=>"Student Add Successfuly."]);
     }
 

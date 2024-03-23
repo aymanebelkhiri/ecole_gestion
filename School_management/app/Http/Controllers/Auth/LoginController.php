@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/prof';
+    protected $redirectTo = '/l';
     
 
     /**
