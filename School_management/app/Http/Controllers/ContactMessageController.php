@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\contact;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 use App\Models\ContactMessage;
+use Illuminate\Support\Facades\Mail;
 
 class ContactMessageController extends Controller
 {
@@ -27,7 +30,10 @@ class ContactMessageController extends Controller
         $contactMessage->subject = $validatedData['subject'];
         $contactMessage->message = $validatedData['message'];
         $contactMessage->save();
-
+        $admins=Admin::all();
+        foreach($admins as $admin){
+        Mail::to($admin->Email)->send( new contact());
+        }
         return redirect()->route('home')->with('successM', 'Your message was sent successfully!');
     }
 }
