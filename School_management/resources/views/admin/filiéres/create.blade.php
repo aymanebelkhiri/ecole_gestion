@@ -4,21 +4,26 @@
 <center><h1><i>Ajouter un groupe</i></h1></center><br><br>
 
     
-     <form action="{{ route('filiéres.store') }}" method="POST">
-        @csrf
+<form action="{{ route('filiéres.store') }}" method="POST" enctype="multipart/form-data">
+  @csrf
   <div class="mb-3">
-    <label for="nom" class="form-label">Nom </label>
-    <input type="text" class="form-control" id="nom" name='nom'>
+      <label for="nom" class="form-label">Nom </label>
+      <input type="text" class="form-control" id="nom" name='nom'>
   </div>
   <div class="mb-3">
-    <label for="desc" class="form-label">Description </label>
-    <input type="text" class="form-control" id="desc" name='description'>
+      <label for="desc" class="form-label">Description </label>
+      <input type="text" class="form-control" id="desc" name='description'>
   </div>
   <div class="mb-3">
-    <label for="domaine" class="form-label">Domaine </label>
-    <input type="text" class="form-control" id="domaine" name='domaine'>
+      <label for="domaine" class="form-label">Domaine </label>
+      <input type="text" class="form-control" id="domaine" name='domaine'>
   </div>
-  
+  <div class="mb-3">
+      <label for="Picture" class="form-label">Photo </label>
+      <input type="file" class="form-control" id="Picture" name='img'>
+  </div>
+
   <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>
+
 @endsection

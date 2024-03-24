@@ -11,7 +11,7 @@
 @endphp
     <div class="container">
         <center><h1><i>ADD Students</i></h1></center><br>
-        <form method="POST" action="{{ route('adminEtudiant.store') }}" class="row">
+        <form method="POST" action="{{ route('adminEtudiant.store') }}" class="row" enctype="multipart/form-data">
             @csrf
 
             <div class="col-md-6">
@@ -28,10 +28,12 @@
                 </div>
             </div>
 
+            
+
             <div class="col-md-6">
                 <label for="email" class="col-md-12 col-form-label ">{{ __('Email Address') }}</label>
 
-                <div >
+                <div>
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                     @error('email')
@@ -93,6 +95,13 @@
 
                     <input class="form-check-input" type="radio" name="sexe" id="gender_woman" value="woman">
                     <label class="form-check-label" for="gender_woman">Woman</label>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label for="email" class="col-md-12 col-form-label ">{{ __('Profile') }}</label>
+
+                <div>
+                    <input id="img"  type="file"  class="form-control" name="img" value="{{old('img')}}">
                 </div>
             </div>
             <input type="hidden" value="etudiants" name="role" >

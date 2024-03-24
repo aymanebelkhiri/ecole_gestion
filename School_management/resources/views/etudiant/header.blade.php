@@ -44,11 +44,17 @@
 
     <section class="d-flex">
 
-        <aside style="box-sizing:border-box;"><br>
+        <aside style="box-sizing:border-box;">
             <center>
-            <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24"><path fill="white" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
-            <h4 style="color: #f5a425;">{{$etudiant["Nom"]}}</h4>
+                @if ($etudiant->photo)
+                    <img src="{{ asset('storage/'. $etudiant->photo) }}" width="88" height="100" alt="Description de l'image">
+                    
+                    @else
+                    <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24"><path fill="white" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+                @endif
+                <h4 style="color: #f5a425;">{{$etudiant->Nom}}</h4>
             </center>
+            
             <hr>
             <div><a href="{{ route('etudiant') }}" style="padding:15px 35px;">Personal Info </a></div>
 

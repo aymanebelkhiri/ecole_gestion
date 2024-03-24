@@ -19,6 +19,7 @@ class Etudiant extends Model
         'Sexe',
         'Email',
         'Password',
-        'Groupe'
+        'Groupe',
+        'photo',
     ];
 }

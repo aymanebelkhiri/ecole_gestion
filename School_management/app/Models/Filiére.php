@@ -13,7 +13,8 @@ class Filiére extends Model
     protected $fillable = [
         'Nom',
         'Domaine',
-        'Description'
+        'Description',
+        'photo'
     ] ;
 
     public function etudiants(){
