@@ -15,9 +15,7 @@ return new class extends Migration
             $table->string('photo', 100)->nullable();
         });
 
-        Schema::table('events', function (Blueprint $table) {
-            $table->string('photo', 100)->nullable();
-        });
+    
     }
 
     /**
@@ -31,8 +29,6 @@ return new class extends Migration
             $table->dropColumn('photo');
         });
 
-        Schema::table('events', function (Blueprint $table) {
-            $table->dropColumn('photo');
-        });
+    
     }
 };
