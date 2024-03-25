@@ -406,14 +406,14 @@
       </div>
     </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     @if(auth()->check())
-    @if(auth()->user()->role === 'etudiants')
-        <a id="redirectLink" class="btn" href="{{ route('etudiant') }}">Login</a>
-    @elseif(auth()->user()->role === 'admin')
-        <a id="redirectLink" class="btn" href="{{ route('events.index') }}">Login</a>
-    @elseif(auth()->user()->role === 'profs')
-        <a id="redirectLink" class="btn" href="{{ route('prof') }}">Login</a>
-    @endif
-@endif
+      @if(auth()->user()->role === 'etudiants')
+          <a id="redirectLink" class="btn" href="{{ route('etudiant') }}">Login</a>
+      @elseif(auth()->user()->role === 'admin')
+          <a id="redirectLink" class="btn" href="{{ route('events.index') }}">Login</a>
+      @elseif(auth()->user()->role === 'profs')
+          <a id="redirectLink" class="btn" href="{{ route('prof') }}">Login</a>
+      @endif
+  @endif
 
 <script defer>
     function clickLinkAfterDelay() {

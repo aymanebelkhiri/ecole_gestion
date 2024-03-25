@@ -6,6 +6,7 @@ use App\Mail\editetudiant;
 use App\Models\Absence_etudiant;
 use App\Models\Admin;
 use App\Models\Etudiant;
+
 use App\Models\MessageProf;
 use App\Models\MessageSecretary;
 use App\Models\Note;
@@ -36,31 +37,37 @@ class EtudiantCont extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $data)
-    {
-        $user = new User();
-        $user->name = $data['name'];
-        $user->email = $data['email'];
-        $user->password = Hash::make($data['password']);
-        $user->role = "etudiants";
-        $user->save();
-        
-        if ($data['role'] === 'etudiants') {
-            $etudiant = new Etudiant();
-            $etudiant->id_etudiant = $user->id;
-            $etudiant->Matricule = $data['matricule'];
-            $etudiant->Nom = $data['name'];
-            $etudiant->Prenom = ""; // Assurez-vous de spécifier une valeur pour chaque colonne non nullable
-            $etudiant->DateNaissance = $data['date'];
-            $etudiant->Sexe = $data['sexe']; // Assurez-vous de spécifier une valeur pour chaque colonne non nullable
-            $etudiant->Email = $data['email'];
-            $etudiant->Password = Hash::make($data['password']); // Assurez-vous de hasher le mot de passe
-            $etudiant->Age = $data['age'];
-            $etudiant->Groupe = $data["grp"];
-            $etudiant->save();
-        }        
-        return view("admin.etudiants.liste",['data' => $data->input(),"success"=>"Student Add Successfuly."]);
-    }
+    public function store(Request $request)
+{
+    $user = new User();
+    $user->name = $request->input('name');
+    $user->email = $request->input('email');
+    $user->password = Hash::make($request->input('password'));
+    $user->role = "etudiants";
+    $user->save();
+    
+    if ($request->hasFile('img')) {
+        $etudiant = new Etudiant();
+        $etudiant->id_etudiant = $user->id;
+        $etudiant->Matricule = $request->input('matricule');
+        $etudiant->Nom = $request->input('name');
+        $etudiant->Prenom = ""; // Assurez-vous de spécifier une valeur pour chaque colonne non nullable
+        $etudiant->DateNaissance = $request->input('date');
+        $etudiant->Sexe = $request->input('sexe'); // Assurez-vous de spécifier une valeur pour chaque colonne non nullable
+        $etudiant->Email = $request->input('email');
+        $etudiant->Password = Hash::make($request->input('password')); // Assurez-vous de hasher le mot de passe
+        $etudiant->Age = $request->input('age');
+        $etudiant->Groupe = $request->input('grp');
+        if ($request->hasFile('img')) {
+            $img = $request->file('img')->store('photos', 'public');
+        $etudiant->photo = $img;
+        }
+        $etudiant->save();
+    }        
+    
+    return view("admin.etudiants.liste", ['data' => $request->input(), "success" => "Student Added Successfully."]);
+}
+
 
     /**
      * Display the specified resource.
@@ -87,23 +94,35 @@ class EtudiantCont extends Controller
 
     /**
      * Update the specified resource in storage.
-     *  error khaado yt9ad !!! aymane
      */
     public function update(Request $request, string $id)
-    {
-        $Etudiant=Etudiant::where("id_etudiant",$id)->first();
-        $Etudiant->Nom=strip_tags($request->input("name"));
-        $Etudiant->DateNaissance=strip_tags($request->input("date"));
-        $Etudiant->Email=strip_tags($request->input("email"));
-        $Etudiant->Matricule=strip_tags($request->input("matricule"));
-        $Etudiant->save();
-        $user=User::findOrFail($id);
-        $user->name=strip_tags($request->input("name"));
-        $user->email=strip_tags($request->input("email"));
-        $user->save();
-        Mail::to($Etudiant->Email)->send(new editetudiant());
-        return view("admin.etudiants.liste",['data' => $request->input(),"success"=>"Student Edided Successfuly."]);
+{
+    $Etudiant = Etudiant::where("id_etudiant", $id)->first();
+    $Etudiant->Nom = strip_tags($request->input("name"));
+    $Etudiant->DateNaissance = strip_tags($request->input("date"));
+    $Etudiant->Email = strip_tags($request->input("email"));
+    $Etudiant->Matricule = strip_tags($request->input("matricule"));
+
+    // Vérifier si un fichier a été téléchargé
+    if ($request->hasFile('img')) {
+        // Stocker le fichier et mettre à jour le chemin dans la base de données
+        $img = $request->file('img')->store('photos', 'public');
+        $Etudiant->photo = $img;
     }
+
+    $Etudiant->save();
+
+    $user = User::findOrFail($id);
+    $user->name = strip_tags($request->input("name"));
+    $user->email = strip_tags($request->input("email"));
+    $user->save();
+
+    Mail::to($Etudiant->Email)->send(new editetudiant());
+
+    return view("admin.etudiants.liste", ['data' => $request->input(), "success" => "Student Edited Successfully."]);
+}
+
+
 
     /**
      * Remove the specified resource from storage.

@@ -28,26 +28,33 @@ class FiliéreController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        $request->validate([
-            'description'=>'required',
-            'nom'=>'required',
-            'domaine'=>'required',
-        ]);
+{
 
-        $Filiére = Filiére::create([
-            'Nom'=>$request->nom,
-            'Description'=>$request->description,
-            'Domaine'=>$request->domaine
-        ]);
 
-        if($Filiére){
-            return redirect()->route('filiéres.index')->with('success', 'Étudiant ajouté avec succès');
-        }else{
-            return redirect()->route('filiéres.create')->with('Echec', 'Failed to add filiére');
-        }
+    $Filiére = new Filiére(); // Création d'une nouvelle instance de modèle
 
+    // Remplissage des attributs
+    $Filiére->Nom = $request->nom;
+    $Filiére->Description = $request->description;
+    $Filiére->Domaine = $request->domaine;
+
+    // Vérification et gestion du fichier image
+    if ($request->hasFile('img')) {
+        $img = $request->file('img')->store('photos', 'public');
+        $Filiére->photo = $img;
     }
+
+    // Enregistrement de l'objet dans la base de données
+    $saved = $Filiére->save();
+
+    if ($saved) {
+        return redirect()->route('filiéres.index')->with('success', 'Filiére ajoutée avec succès');
+    } else {
+        return redirect()->route('filiéres.create')->with('Echec', 'Échec de l\'ajout de la filiére');
+    }
+}
+
+    
 
     /**
      * Display the specified resource.
@@ -73,19 +80,19 @@ class FiliéreController extends Controller
     {
         $filiére = Filiére::find($id);
     
-        $request->validate([
-            'Nom'=>'required',
-            'description' => 'required',
-            'domaine' => 'required'
-        ]);
 
         $filiére->Nom = $request->input('Nom');
         $filiére->Description = $request->input('description');
         $filiére->Domaine = $request->input('domaine');  
-
-        $filiére->save();
+        if ($request->hasFile('img')) {
+            $img = $request->file('img')->store('photos', 'public');
+            $filiére->photo = $img;
+        }
     
-        if ($filiére->save()) {
+        // Enregistrement de l'objet dans la base de données
+        $saved = $filiére->save();
+    
+        if ($saved) {
             $messageSuccess = 'filiére mis à jour avec succès';
             return redirect()->route('filiéres.index')->with('messageSuccess', $messageSuccess);
         } else {
