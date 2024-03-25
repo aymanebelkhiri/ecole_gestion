@@ -404,7 +404,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     @if(auth()->check())
     @if(auth()->user()->role === 'etudiants')
         <a id="redirectLink" class="btn" href="{{ route('etudiant') }}">Login</a>
