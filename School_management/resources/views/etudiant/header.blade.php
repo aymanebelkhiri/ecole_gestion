@@ -5,7 +5,12 @@
     @php
     use App\Models\Etudiant;
     use Illuminate\Support\Facades\Auth;
-    $etudiant = Etudiant::where('id_etudiant', Auth::user()->id)->first();
+    if(Auth::check()) {
+        $etudiant = Etudiant::where('id_etudiant', Auth::user()->id)->first();
+        
+    } else {
+        return redirect()->route('home'); 
+    }
     @endphp
     <br><br><br><br><br>
     <style>
