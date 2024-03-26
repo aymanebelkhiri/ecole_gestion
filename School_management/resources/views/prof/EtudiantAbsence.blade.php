@@ -66,9 +66,9 @@
             <tbody>
                 @foreach($Etudiants as $Etudiant)
                 <tr>
-                    <td>photo</td>
-                    <td>{{$Etudiant->Nom}}</td>
-                    <td colspan="1">
+                    <td><img src="{{ asset('storage/'. $Etudiant->photo) }}" width="88" height="100" alt="Description de l'image"></td>
+                    <td style="align-content: center">{{$Etudiant->Nom}}</td>
+                    <td colspan="1" style="align-content: center">
                         <form action="{{ route('absence.store') }}" method="post" class="row">
                             @csrf
                             <div class="col-6">

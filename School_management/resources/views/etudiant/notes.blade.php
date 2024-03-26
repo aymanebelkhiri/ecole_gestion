@@ -16,8 +16,8 @@
     foreach ($Modules as $Module) {
 
         $notes = Note::where('Etudiant',auth()->user()->id)
-                      ->where('Module', $Module->id_module)
-                      ->get();
+                        ->where('Module', $Module->id_module)
+                        ->get();
 
         $notesParModule[$Module->Nom] = $notes;
     }
