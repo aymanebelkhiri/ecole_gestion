@@ -47,7 +47,7 @@
 </style>
 
 
-<center><h1>Absence </h1></center><br>
+<center><h1 >Absence </h1></center><br>
 <div class="container total">
     <form action="{{route('absence.store2')}}" method="post" class="row">
         @csrf

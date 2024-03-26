@@ -1,3 +1,6 @@
+@php
+    use App\Models\Filiére;
+@endphp
 @extends('admin.header')
 @section('adminContent')
 <div>
@@ -27,7 +30,11 @@
                 <td class='table-primary'>{{$Module->Nom}}</td>
                 <td class='table-primary'>{{$Module->MasseHoraire}}</td>
                 <td class='table-primary'>{{$Module->Coefficient}}</td>
-                <td class='table-primary'>{{$Module->Filiére}}</td>
+                @php
+
+                    $filiere=Filiére::findOrFail($Module->Filiére);
+                @endphp
+                <td class='table-primary'>{{$filiere->Nom}}</td>
                 <td class='table-primary'>
                 <a href="{{ route('modules.edit', $Module->id_module) }}" class='btn btn-success'>Modifier</a>   
                 <form id="delete-form-{{$Module->id_module}}" action="{{ route('modules.destroy', $Module->id_module) }}" method="POST" style="display: inline;">

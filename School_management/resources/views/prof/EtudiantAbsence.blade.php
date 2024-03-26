@@ -46,7 +46,7 @@
 </style>
 
 
-<center><h1>Absences</h1></center><br>
+<center><h1 style="margin-top: -30px">Absences</h1></center><br>
 <div class="container total ">
     
     @if(isset($success))
