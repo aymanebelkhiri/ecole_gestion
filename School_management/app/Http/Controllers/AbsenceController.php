@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AbsenceController extends Controller
 {
     public function getAbsence($id){
-        $Absences =Absence_etudiant::where(["Etudiant"=>$id])->get();
+        $Absences =Absence_etudiant::where(["Etudiant"=>auth()->user()->id])->get();
         return view('etudiant.Absence',compact('Absences'));
     }
 }

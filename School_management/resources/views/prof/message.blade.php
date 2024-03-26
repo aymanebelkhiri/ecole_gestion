@@ -42,10 +42,12 @@ $messages = MessageProf::where('Prof', Auth::user()->id)
                 <th>date</th>
             </tr>
             <tr>
-                <td>{{$Etudiant['Nom']}}</td>
-                <td>{{$Group['Nom']}}</td>
-                <td>{{$message['Message']}}</td>
-                <td>{{$message['created_at']}}</td>
+                <td><img src="{{ asset('storage/'. $Etudiant->photo) }}" width="88" height="100" alt="Description de l'image"> <br>
+                    {{$Etudiant['Nom']}}
+                </td>
+                <td style="align-content: center">{{$Group['Nom']}}</td>
+                <td style="align-content: center">{{$message['Message']}}</td>
+                <td style="align-content: center">{{$message['created_at']}}</td>
             </tr>
 
         </table>
