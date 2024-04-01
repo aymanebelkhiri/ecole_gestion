@@ -44,9 +44,11 @@
             <tbody>
                 @foreach($Etudiants as $Etudiant)
                 <tr>
-                    <td>photo</td>
-                    <td>{{$Etudiant->Nom}}</td>
-                    <td class="row" style="box-sizing: border-box " class="wrap"  >
+                    <td>
+                        <img src="{{ asset('storage/'. $Etudiant->photo) }}" width="88" height="100" alt="Description de l'image">
+                    </td>
+                    <td style="align-content: center">{{$Etudiant->Nom}}</td>
+                    <td class="row" style="box-sizing: border-box " class="wrap" style="align-content: center"  >
                         <a href="{{route('adminEtudiant.edit',$Etudiant->id_etudiant."*".$data['grp'])}}" class="btn btn-secondary col-2">Edit</a>
                         <form  action="{{route('adminEtudiant.destroy',$Etudiant->id_etudiant."*".$data['grp'])}}" method="post" class="col-6">
                             @csrf

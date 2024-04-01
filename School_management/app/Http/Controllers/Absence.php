@@ -42,7 +42,7 @@ class Absence extends Controller
         Mail::to($et->Email)->send(new MailAbsence());
         // Redirection de l'utilisateur avec un message de succès et la requête
         return view('prof.EtudiantAbsence',[
-            'success' => 'Note added successfully.',
+            'success' => 'Absence    added successfully.',
             'data' => $request->all()
         ]);
     }
@@ -66,6 +66,7 @@ class Absence extends Controller
         $grp = $array[1];   // Module
 
         return view("prof.edit_absence",[
+            
             "Absence"=>Absence_etudiant::findOrFail($id_abs),
             "grp"=>$grp
         ]);
@@ -82,7 +83,7 @@ class Absence extends Controller
         $et=Etudiant::findOrFail($Absence->Etudiant);
         Mail::to($et->Email)->send(new MailAbsence());
         return view('prof.EtudiantAbsence',[
-            'success' => 'Note edited successfully.',
+            'success' => 'Absence edited successfully.',
             'data' => $request->all()
         ]);
     }
@@ -104,7 +105,7 @@ class Absence extends Controller
         $Absence->delete();
     
         return view('prof.EtudiantAbsence',[
-            'success' => 'Note deleted successfully.',
+            'success' => 'Absence deleted successfully.',
             'data' => $data
         ]);
     }
