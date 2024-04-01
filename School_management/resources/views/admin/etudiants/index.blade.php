@@ -30,7 +30,6 @@
         $dico_filiere[$filiere1->Nom]=$Liste_grp;
         $Liste_grp = array();
     }
-
 @endphp
     <div class="container">
         <center><h1><i>Filter Students</i></h1></center><br>
