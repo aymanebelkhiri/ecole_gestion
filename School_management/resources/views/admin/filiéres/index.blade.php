@@ -18,7 +18,7 @@ try {
 
 <head>
     <meta charset="utf-8">
-    <title>Students</title>
+    <title>Branch</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -79,7 +79,7 @@ try {
                     <a href="{{route('filiéres.index')}}" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Branch</a>
                     <a href="{{route('modules.index')}}" class="nav-item nav-link " ><i class="fa fa-laptop me-2"></i>Module</a>
                     <a href="{{route('groupes.index')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Groupes</a>
-                    <a href="{{route('profs.index')}}" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Teacers</a>
+                    <a href="{{route('profs.index')}}" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Teacher</a>
                     <a href="{{route('addEtudiant')}}" class="nav-item nav-link "><i class="fa fa-table me-2"></i>Students</a>
                     <a href="{{route('events.index')}}" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Events</a>
                     <a href="{{ route('Messages')}}" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i></i>Messages</a>
@@ -180,7 +180,6 @@ try {
                     <div class="table-responsive row ">
                         <table class='table table-striped'>
                             <tr>
-                                <th scope='col'>Id</th>
                                 <th scope='col'>Name </th>
                                 <th scope='col'>Description</th>
                                 <th scope='col'>Domaine</th>
@@ -189,7 +188,6 @@ try {
                             @if(isset($Filiéres))
                             @foreach($Filiéres as $Filiére)
                             <tr class="text-white">
-                                <td >{{$Filiére->id}}</td>
                                 <td >{{$Filiére->Nom}}</td>
                                 <td >
                                     <div style="width: 400px" class="text-center m-auto">
