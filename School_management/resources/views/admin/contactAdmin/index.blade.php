@@ -80,7 +80,6 @@ try {
                     <a href="{{route('profs.index')}}" class="nav-item nav-link "><i class="fa fa-keyboard me-2"></i>Teacher</a>
                     <a href="{{route('addEtudiant')}}" class="nav-item nav-link "><i class="fa fa-table me-2"></i>Students</a>
                     <a href="{{route('events.index')}}" class="nav-item nav-link "><i class="fa fa-chart-bar me-2"></i>Events</a>
-                    <a href="{{ route('Messages')}}" class="nav-item nav-link "><i class="far fa-file-alt me-2"></i></i>Messages</a>
                     <a href="{{route('contactAdmin.index')}}" class="nav-item nav-link active"><i class="far fa-file-alt me-2"></i>Contact</a>
                 </div>
             </nav>
@@ -102,45 +101,10 @@ try {
                     <input class="form-control bg-dark border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Message</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">See all message</a>
-                        </div>
-                    </div>
+                    <a href="{{ route('Messages')}}" class="nav-item nav-link">
+                        <i class="fa fa-envelope me-lg-2"></i>
+                        <span class="d-none d-lg-inline-flex">Message</span>
+                    </a>
                     
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -148,7 +112,6 @@ try {
                             <span class="d-none d-lg-inline-flex">{{$admin->Nom}}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="{{ route('prof') }}" class="dropdown-item">My Profile</a>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();" class="dropdown-item">Log Out</a>
 
