@@ -24,7 +24,7 @@
 
 <!--
     
-TemplateMo 557 Grad School
+TemplateMo 557 ISGI
 
 https://templatemo.com/tm-557-grad-school
 
@@ -372,7 +372,7 @@ https://templatemo.com/tm-557-grad-school
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p><i class="fa fa-copyright"></i> Copyright 2020 by Grad School  
+          <p><i class="fa fa-copyright"></i> Copyright 2020 by ISGI  
           
            | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</a><br>
            Distributed By: <a href="https://themewagon.com" rel="sponsored" target="_blank">ThemeWagon</a>

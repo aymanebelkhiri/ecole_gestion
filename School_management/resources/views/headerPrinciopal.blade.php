@@ -24,7 +24,7 @@
 
 <!--
     
-TemplateMo 557 Grad School
+TemplateMo 557 ISGI
 
 https://templatemo.com/tm-557-grad-school
 
@@ -187,7 +187,7 @@ https://templatemo.com/tm-557-grad-school
   <!--header-->
   <header class="main-header clearfix" role="header">
     <div class="logo">
-      <a href="#"><em>Grad</em> School</a>
+      <a href="#"><em>IS</em>GI</a>
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
@@ -333,8 +333,8 @@ https://templatemo.com/tm-557-grad-school
   <div class="modal-body2"><br>
   <form method="POST" action="{{ route('password.email') }}">
                         @csrf
-
                         <div class="row mb-3">
+                          3 a 6 ()
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
@@ -370,7 +370,7 @@ https://templatemo.com/tm-557-grad-school
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p><i class="fa fa-copyright"></i> Copyright 2020 by Grad School  
+          <p><i class="fa fa-copyright"></i> Copyright 2020 by ISGI  
           
            | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</a><br>
            Distributed By: <a href="https://themewagon.com" rel="sponsored" target="_blank">ThemeWagon</a>

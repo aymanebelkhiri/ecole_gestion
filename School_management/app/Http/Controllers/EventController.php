@@ -8,9 +8,14 @@ use Illuminate\Http\Request;
 class EventController extends Controller
 {
     public function getEvents(){
-        
-        $events = DB::table('Events')->get();
-        return view('etudiant.Events',compact('events'));
+        try {
+            $events = DB::table('Events')->get();
+            return view('etudiant.Events',compact('events'));
+            //code...
+        } catch (\Throwable $th) {
+            return view('etudiant.Events');
+            //throw $th;
+        }
 
 
     }

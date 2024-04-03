@@ -7,7 +7,13 @@ use Illuminate\Http\Request;
 class ExamController extends Controller
 {
     public function getExams(){
-      $exams = Exam::all();
-      return view('etudiant.exams',compact('exams'));
+      try {
+        $exams = Exam::all();
+        return view('etudiant.exams',compact('exams'));
+        //code...
+      } catch (\Throwable $th) {
+        return view('etudiant.exams');
+        //throw $th;
+      }
     }
 }
