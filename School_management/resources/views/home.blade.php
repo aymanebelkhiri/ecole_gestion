@@ -40,7 +40,6 @@
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-<<<<<<< HEAD
         <div class="col-lg-4 col-12">
           <div class="features-post second-features">
             <div class="features-content">
@@ -402,9 +401,7 @@
         </div>
       </div>
     </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-=======
     </div>
->>>>>>> e16ab9c3b54b8dd92b4ecfa5bdf712aa5f5c30a7
     @if(auth()->check())
       @if(auth()->user()->role === 'etudiants')
           <a id="redirectLink" class="btn" href="{{ route('etudiant') }}">Login</a>

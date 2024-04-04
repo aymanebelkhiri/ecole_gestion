@@ -22,8 +22,12 @@ use App\Http\Controllers\EtudiantCont;
 use App\Http\Controllers\FiltrerEtudiants;
 use App\Http\Controllers\GroupeController;
 use App\Http\Controllers\UpdateEtudiant;
-// use App\Http\Controllers\NoteController;
-// use App\Http\Controllers\GroupesController;
+
+
+use App\Http\Controllers\EmploiController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CourseAdController;
+use App\Http\Controllers\ContactMessageController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -108,9 +112,7 @@ Route::get('/etude/{grp}', function ($grp) {
 
 //-----------------------------narjisse----------------------------
 
-// Route::resource('groupes', App\Http\Controllers\GroupeController::class);
 // Route::resource('etudiants', App\Http\Controllers\GroupesController::class);
-// Route::resource('profs', App\Http\Controllers\GroupesController::class);
 // Route::resource('exams', App\Http\Controllers\GroupesController::class);
 // Route::resource('events', App\Http\Controllers\GroupesController::class);
 // Route::resource('messages', App\Http\Controllers\GroupesController::class);
@@ -142,11 +144,6 @@ Route::get('/ContactForAdmin', function(){
 Route::get('/absences/{id}',[AbsenceController::class,'getAbsence'])->name('Absences');
 //-----------------------------hraph-------------------------------
 
-
-use App\Http\Controllers\EmploiController;
-use App\Http\Controllers\CourseController;
-use App\Http\Controllers\CourseAdController;
-use App\Http\Controllers\ContactMessageController;
 
 Route::get('/emploi', [EmploiController::class, 'index'])->name('Emploi');
 
