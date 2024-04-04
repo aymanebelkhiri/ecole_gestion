@@ -21,7 +21,7 @@ a {
 }
 
 a:hover {
-	color: #FC3;
+	color: #EB1616;
     text-decoration: none;
 }
 
@@ -69,7 +69,7 @@ p {
 /* Buttons */
 
 .main-button a {
-    background-color: #f5a425;
+    background-color: #EB1616;
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
@@ -115,7 +115,7 @@ a.menu-link { display: none; }
     margin: 0;
     padding: 0;
     border-top: 1px solid rgba(250,250,250,0.25);
-    background-color: rgba(22,34,57,0.99);
+    background-color: black;
   }
   nav[role="navigation"] li a {
     display: block;
@@ -130,7 +130,7 @@ a.menu-link { display: none; }
   }
   nav[role="navigation"] li:hover a,
   nav[role="navigation"] li.active a {
-      color: #f5a425;
+      color: #EB1616;
   }
   
   @media screen and (min-width: 951px) {
@@ -165,7 +165,7 @@ a.menu-link { display: none; }
 }
 
 .main-header {
-    background-color: rgba(22,34,57,0.95);
+    background-color: black;
     height: 80px;
     position: fixed;
     z-index: 12;
@@ -187,7 +187,7 @@ a.menu-link { display: none; }
 }
 .main-header .logo a em {
     font-style: normal;
-    color: #f5a425;
+    color: #EB1616;
 }
 
 .main-menu {
@@ -230,7 +230,7 @@ a.menu-link { display: none; }
 .main-menu li .sub-menu {
     position: absolute;
     width: 160px;
-    background-color: #18233a;
+    background-color:black;
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s;
@@ -269,13 +269,13 @@ a.menu-link { display: none; }
 }
 
 .main-menu li .sub-menu li a:hover {
-    color: #f5a425;
+    color: #EB1616;
     border: none;
 }
 
 .main-nav li:hover a,
 .main-nav li.active a {
-    border: 2px solid #f5a425;
+    border: 2px solid #EB1616;
 }
 
 @media (max-width: 950px) {
@@ -311,7 +311,7 @@ a.menu-link { display: none; }
 
 .video-overlay {
     position: absolute;
-    background-color: rgba(22,34,57,0.85);
+    background-color:rgb(0, 0, 0,0.75);
     top: 0;
     left: 0;
     bottom: 7px;
@@ -348,7 +348,7 @@ a.menu-link { display: none; }
 
 .main-banner .caption h2 em {
   font-style: normal;
-  color: #f5a425;
+  color: #EB1616;
   font-weight: 900;
 }
 
@@ -402,13 +402,13 @@ section.features .col-4 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #0c1228;
+  background-color: black;
   color: #fff;
   padding: 40px;
 }
 
 .features-content:hover {
-    background-color: #f5a425;
+    background-color: #EB1616;
     box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
 }
 
@@ -491,7 +491,7 @@ section.features .col-4 {
 
 section.why-us {
     background-image: url(../images/choosing-bg.jpg);
-    background-color: #172238;
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
@@ -565,15 +565,15 @@ section.why-us {
 #tabs ul .ui-tabs-active {
 }
 #tabs ul .ui-tabs-active a {
-  color: #f5a425;
+  color: #EB1616;
 }
 #tabs ul .ui-tabs-active a:after {
-  background-color: #f5a425;
+  background-color: #EB1616;
   width: 15px;
   height: 15px;
 }
 #tabs ul .ui-tabs-active a:before {
-  border-color: #f5a425;
+  border-color: #EB1616;
 }
 #tabs h4 {
     margin-top: 60px;
@@ -621,10 +621,10 @@ section.why-us {
 /* Coming Soon */
 
 section.coming-soon {
-    background-image: url(../images/coming-soon-bg.jpg);
+    background-image: url(../images/leeer.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #172238;
+    background-color: black;
     padding: 120px 0px;
 }
 
@@ -642,7 +642,7 @@ section.coming-soon .continer h4 {
 }
 section.coming-soon .continer h4 em {
     font-style: normal;
-    color: #f5a425;
+    color: #EB1616;
 }
 
 @media screen and (max-width: 767px) {
@@ -665,7 +665,7 @@ section.coming-soon .continer .counter .seconds {
   font-weight: 800;
   letter-spacing: 1px;
   color: #fff;
-  background-color: rgba(250,250,250,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 992px) {
 
@@ -705,7 +705,7 @@ section.coming-soon .continer .counter .seconds .value {
 section.coming-soon .continer .counter span {
     font-size: 18px;
     text-transform: uppercase;
-    color: #f5a425;
+    color: #EB1616;
     font-weight: 500;
     letter-spacing: 1px;
     margin-top: 0px;
@@ -777,7 +777,7 @@ section.coming-soon form input::placeholder { color: #fff; }
 
 section.coming-soon form button {
     margin-top: 10px;
-    background-color: #f5a425;
+    background-color: #EB1616;
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
@@ -798,7 +798,7 @@ section.courses {
     background-image: url(../images/choosing-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #172238;
+    background-color: black;
     padding-bottom: 100px;
     padding: 0px 30px 100px 30px;
 }
@@ -831,7 +831,7 @@ section.courses .item .down-content p {
 
 section.courses .item .down-content img {
     width: 40px;
-    border: 2px solid #f5a425;
+    border: 2px solid #EB1616;
     border-radius: 50%;
     text-align: left;
     display: inline-block;
@@ -844,7 +844,7 @@ section.courses .item .down-content .text-button-pay {
 }
 
 section.courses .item .down-content .text-button-pay a {
-    color: #f5a425;
+    color: #EB1616;
     font-size: 13px;
 }
 
@@ -875,7 +875,7 @@ section.courses .owl-carousel button.owl-dot {
     outline: none;
 }
 section.courses .owl-carousel button.active {
-    background-color: #f5a425;
+    background-color: #EB1616;
 }
 
 
@@ -888,7 +888,7 @@ section.video {
     background-image: url(../images/video-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #172238;
+    background-color: black;
     padding: 120px 0px;
 }
 
@@ -913,7 +913,7 @@ section.video .left-content h4 {
 }
 section.video .left-content h4 em {
     font-style: normal;
-    color: #f5a425;
+    color: #EB1616;
 }
 
 section.video .left-content .main-button {
@@ -958,7 +958,7 @@ section.video .left-content .main-button {
   margin-top: -32.5px;
   margin-left: -32.5px;
   border-radius: 50%;
-  background-color: #f5a425;
+  background-color: #EB1616;
   z-index: 10;
 }
 .video-item figure a:after {
@@ -974,7 +974,7 @@ section.video .left-content .main-button {
   z-index: 10;
 }
 .video-item figure a:hover:before {
-  background-color: #f5a425;
+  background-color: #EB1616;
 }
 
 .video-item .video-caption {
@@ -1449,7 +1449,7 @@ section.contact {
     background-image: url(../images/contact-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #172238;
+    background-color: black;
     padding-bottom: 120px;
 }
 
@@ -1513,7 +1513,7 @@ section.contact form textarea::placeholder { color: #fff; }
 section.contact form textarea::placeholder { color: #fff; }
 
 section.contact form button {
-    background-color: #f5a425;
+    background-color: #EB1616;
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
@@ -1529,7 +1529,7 @@ section.contact form button {
 /* Footer */
 
 footer {
-    background-color: #152036;
+    background-color: black;
     text-align: center;
 }
 
@@ -1545,11 +1545,11 @@ footer p {
 
 footer p a,
 footer p a:hover {
-    color: #f5a425;
+    color: #EB1616;
 }
 
 @media screen and (max-width: 992px) {
-  .features { background-color: #0c1228; }
+  .features { background-color: black; }
   .features-content { position: relative; }
   .features-post { border-left: 0 }
 }
