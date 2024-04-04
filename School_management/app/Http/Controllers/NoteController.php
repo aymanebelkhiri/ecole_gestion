@@ -31,17 +31,14 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
-        // Création d'une nouvelle note avec les données validées
         $note = new Note();
         $note->Title = strip_tags($request->input("title"));
         $note->Valeur = strip_tags($request->input("note"));
         $note->Module = strip_tags($request->input("module"));
         $note->Etudiant = strip_tags($request->input("etudiant"));
-        // Enregistrement de la note dans la base de données
         $note->save();
         $et=Etudiant::findOrFail($note->Etudiant);
         Mail::to($et->Email)->send(new MailNote());
-        // Redirection de l'utilisateur avec un message de succès et la requête
         return view('prof.EtudiantNote',[
             'success' => 'Note added successfully.',
             'data' => $request->all()

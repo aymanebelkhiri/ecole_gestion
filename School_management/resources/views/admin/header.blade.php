@@ -56,6 +56,7 @@
             <div><a href="{{route('events.index')}}">Events</a></div>
             <div><a href="{{ route('Messages')}}"> Messages</a></div>
             <div><a href="{{route('contactAdmin.index')}}"> Contact</a></div>
+            <!-- <div><a href="{{route('coursesAd.index')}}">Courses</a></div> -->
             <br><br><br><br><br>
             <br><br><br><br><br>
         </aside>

@@ -103,9 +103,7 @@ class EtudiantCont extends Controller
     $Etudiant->Email = strip_tags($request->input("email"));
     $Etudiant->Matricule = strip_tags($request->input("matricule"));
 
-    // Vérifier si un fichier a été téléchargé
     if ($request->hasFile('img')) {
-        // Stocker le fichier et mettre à jour le chemin dans la base de données
         $img = $request->file('img')->store('photos', 'public');
         $Etudiant->photo = $img;
     }
