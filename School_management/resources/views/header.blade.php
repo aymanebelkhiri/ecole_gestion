@@ -18,13 +18,13 @@
 
 <!-- Additional CSS Files -->
 <link rel="stylesheet" href="{{ url('css/fontawesome.css') }}">
-<link rel="stylesheet" href="{{ url('css/templatemo-grad-school.css') }}">
-<link rel="stylesheet" href="{{ url('css/owl.css') }}">
+<link rel="stylesheet" href="{{ url('css/templatemo-grad-school3.css') }}">
+<link rel="stylesheet" href="{{ url('css/owl2.css') }}">
 <link rel="stylesheet" href="{{ url('css/lightbox.css') }}">
 
 <!--
     
-TemplateMo 557 Grad School
+TemplateMo 557 ISGI
 
 https://templatemo.com/tm-557-grad-school
 
@@ -35,10 +35,7 @@ https://templatemo.com/tm-557-grad-school
           text-decoration: none;
 
         }
-        body {
-          height: 100vh;
-          
-        }
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -190,7 +187,7 @@ https://templatemo.com/tm-557-grad-school
   <!--header-->
   <header class="main-header clearfix" role="header">
     <div class="logo">
-      <a href="#"><em>Grad</em> School</a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24" style="margin-top: -10px"><path fill="#EB1616" d="m12 21l-7-3.8v-6L1 9l11-6l11 6v8h-2v-6.9l-2 1.1v6zm0-8.3L18.85 9L12 5.3L5.15 9zm0 6.025l5-2.7V12.25L12 15l-5-2.75v3.775zm0-3.775"/></svg> <em> IS</em>GI</a>
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
@@ -204,26 +201,27 @@ https://templatemo.com/tm-557-grad-school
                 @auth
                 <li>
                   @if(auth()->check())
-                    @if(auth()->user()->role === 'admin')
-                        <a href="{{  route('events.index')}}" class="external">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                                <path fill="white" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/>
-                            </svg>
-                        </a>
-                    @elseif(auth()->user()->role === 'etudiants')
-                        <a href="{{ route('etudiant') }}" class="external">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                                <path fill="white" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/>
-                            </svg>
-                        </a>
-                    @elseif(auth()->user()->role === 'profs')
-                        <a href="{{ route('prof') }}" class="external">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-                                <path fill="white" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/>
-                            </svg>
-                        </a>
-                    @endif
-                @endif
+                      @if(auth()->user()->role === 'admin')
+                          <a href="{{ route('events.index')}}" class="external">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                                  <path fill="white" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/>
+                              </svg>
+                          </a>
+                      @elseif(auth()->user()->role === 'etudiants')
+                          <a href="{{ route('etudiant') }}" class="external">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                                  <path fill="white" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/>
+                              </svg>
+                          </a>
+                      @elseif(auth()->user()->role === 'profs')
+                          <a href="{{ route('prof') }}" class="external">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                                  <path fill="white" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/>
+                              </svg>
+                          </a>
+                      @endif
+                  @endif
+
                 </li>
                 <li>
                   <a class="external" href="{{ route('logout') }}"
@@ -236,7 +234,7 @@ https://templatemo.com/tm-557-grad-school
                                         @csrf
                                     </form>
                 @else
-                <li><a  id="myBtn" class="external">Connect</a></li>
+                <li><a  href="{{ route('login') }}" class="external">Connect</a></li>
 
                     <!-- @if (Route::has('register'))
                         <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
@@ -335,8 +333,8 @@ https://templatemo.com/tm-557-grad-school
   <div class="modal-body2"><br>
   <form method="POST" action="{{ route('password.email') }}">
                         @csrf
-
                         <div class="row mb-3">
+                          3 a 6 ()
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
@@ -368,11 +366,11 @@ https://templatemo.com/tm-557-grad-school
 </div>
     @yield("content")
 
-    <footer style="">
+    {{-- <footer style="">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p><i class="fa fa-copyright"></i> Copyright 2020 by Grad School  
+          <p><i class="fa fa-copyright"></i> Copyright 2020 by ISGI  
           
            | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</a><br>
            Distributed By: <a href="https://themewagon.com" rel="sponsored" target="_blank">ThemeWagon</a>
@@ -381,7 +379,7 @@ https://templatemo.com/tm-557-grad-school
         </div>
       </div>
     </div>
-  </footer>
+  </footer> --}}
 
 <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->

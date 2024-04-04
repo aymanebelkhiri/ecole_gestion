@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Mail;
 class MessageProfController extends Controller
 {
     public function FormMessage(){
-        $Prof = Prof::pluck('Nom');
-        return view('etudiant.FormProf',compact('Prof'));
+        try {
+            //code...
+            $Prof = Prof::pluck('Nom');
+            return view('etudiant.FormProf',compact('Prof'));
+        } catch (\Throwable $th) {
+            return view('etudiant.FormProf');
+            //throw $th;
+        }
     }
 
     public function SendMessage(Request $request){

@@ -1,49 +1,46 @@
-@extends('headerPrinciopal')
 
-@section('titre', 'Home')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
+<head>
+    <meta charset="utf-8">
+    <title>Personal Information</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
+    <!-- Favicon -->
+    <link href="{{ url('img/favicon.ico') }}" rel="icon">
 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Libraries Stylesheet -->
+    <link href="{{ url('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
 
-  <!-- ***** Main Banner Area Start ***** -->
-  <section class="section main-banner" id="top" data-section="section1">
-      <video autoplay muted loop id="bg-video">
-      <source src="{{ url('images/course-video.mp4') }}" type="video/mp4" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
 
-      </video>
+    <!-- Template Stylesheet -->
+    <link href="{{ url('css/style.css') }}" rel="stylesheet">
+</head>
 
-      <div class="video-overlay header-text">
-          <div class="caption">
-              <h6>Graduate School of Management</h6>
-              <h2><em>Your</em> Classroom</h2>
-              <div class="main-button">
-                  <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
-              </div>
-          </div>
-      </div>
-  </section>
-  <!-- ***** Main Banner Area End ***** -->
-
-
-  <section class="features">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-12">
-          <div class="features-post">
-            <div class="features-content">
-              <div class="content-show">
-                <h4><i class="fa fa-pencil"></i>All Courses</h4>
-              </div>
-              <div class="content-hide">
-                <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
-                <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
-                <div class="scroll-to-section"><a href="#section2">More Info.</a></div>
+<body>
+    <div class="container-fluid position-relative d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
-            </div>
-          </div>
         </div>
+<<<<<<< HEAD
         <div class="col-lg-4 col-12">
           <div class="features-post second-features">
             <div class="features-content">
@@ -405,6 +402,9 @@
         </div>
       </div>
     </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+=======
+    </div>
+>>>>>>> e16ab9c3b54b8dd92b4ecfa5bdf712aa5f5c30a7
     @if(auth()->check())
       @if(auth()->user()->role === 'etudiants')
           <a id="redirectLink" class="btn" href="{{ route('etudiant') }}">Login</a>
@@ -428,5 +428,5 @@
     clickLinkAfterDelay();
 </script>
   </section>
+</body>
 
-@endsection

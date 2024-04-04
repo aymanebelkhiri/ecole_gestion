@@ -74,7 +74,7 @@
     </div>
   </section>
 
-  <section class="section why-us" data-section="section2">
+  {{-- <section class="section why-us" data-section="section2">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -403,6 +403,6 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> --}}
 
 @endsection
