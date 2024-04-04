@@ -145,6 +145,7 @@ try {
                         {{ $success }}
                     </div>
                 @endif
+                <a href="{{route("etude",$data["grp"])}}" class="btn btn-primary col-6">New Student</a><br><br>
                     <div class="table-responsive row ">
                         <table id="example" class="table table-hover" style="width:100%">
                             <thead>
