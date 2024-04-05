@@ -18,10 +18,11 @@
 
 <!-- Additional CSS Files -->
 <link rel="stylesheet" href="{{ url('css/fontawesome.css') }}">
-<link rel="stylesheet" href="{{ url('css/templatemo-grad-school3.css') }}">
+<link rel="stylesheet" href="{{ url('css/style3.css') }}">
 <link rel="stylesheet" href="{{ url('css/owl2.css') }}">
 <link rel="stylesheet" href="{{ url('css/lightbox.css') }}">
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 <!--
     
 TemplateMo 557 ISGI
@@ -365,22 +366,76 @@ https://templatemo.com/tm-557-grad-school
     </div>
 </div>
     @yield("content")
-
-    {{-- <footer style="">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p><i class="fa fa-copyright"></i> Copyright 2020 by ISGI  
-          
-           | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</a><br>
-           Distributed By: <a href="https://themewagon.com" rel="sponsored" target="_blank">ThemeWagon</a>
-          
-          </p>
-        </div>
+    <!-- Footer Start -->
+    <div class="container-fluid  footer  wow fadeIn" data-wow-delay="0.1s">
+      <div class="container py-5">
+          <div class="row g-5">
+              <div class="col-lg-3 col-md-6">
+                  <h4 class="text-white mb-3">Quick Link</h4>
+                  <a class="btn btn-link" href="">About Us</a>
+                  <a class="btn btn-link" href="">Contact Us</a>
+                  <a class="btn btn-link" href="">Privacy Policy</a>
+                  <a class="btn btn-link" href="">Terms & Condition</a>
+                  <a class="btn btn-link" href="">FAQs & Help</a>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h4 class="text-white mb-3">Contact</h4>
+                  <p class="mb-2 text-white   "><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                  <p class="mb-2 text-white   "><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                  <p class="mb-2 text-white   "><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                  <div class="d-flex pt-2">
+                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h4 class="text-white mb-3">Gallery</h4>
+                  <div class="row g-2 pt-2">
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1" src="{{url('images/course-1.jpg')}}" alt="">
+                      </div>
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1" src="{{url('images/course-2.jpg')}}" alt="">
+                      </div>
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1" src="{{url('images/course-3.jpg')}}" alt="">
+                      </div>
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1" src="{{url('images/course-2.jpg')}}" alt="">
+                      </div>
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1" src="{{url('images/course-3.jpg')}}" alt="">
+                      </div>
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1" src="{{url('images/course-1.jpg')}}" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-  </footer> --}}
+      <div class="container">
+          <div class="copyright">
+              <div class="row">
+                  <div class="col-md-6 text-center text-white text-md-start mb-3 mb-md-0">
+                      &copy; <a class="border-bottom" style="color: red" href="#">ISGI</a>, All Right Reserved.
 
+                      Designed By <a class="border-bottom" >ISGI Students</a><br><br>
+                  </div>
+                  <div class="col-md-6 text-center text-md-end">
+                      <div class="footer-menu">
+                          <a href="">Home</a>
+                          <a href="">Cookies</a>
+                          <a href="">Help</a>
+                          <a href="">FQAs</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer End -->
 <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
 <script src="{{ url('vendor/jquery/jquery.min.js') }}"></script>
