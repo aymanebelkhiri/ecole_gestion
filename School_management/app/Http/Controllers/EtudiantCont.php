@@ -51,11 +51,11 @@ class EtudiantCont extends Controller
         $etudiant->id_etudiant = $user->id;
         $etudiant->Matricule = $request->input('matricule');
         $etudiant->Nom = $request->input('name');
-        $etudiant->Prenom = ""; // Assurez-vous de spécifier une valeur pour chaque colonne non nullable
+        $etudiant->Prenom = ""; 
         $etudiant->DateNaissance = $request->input('date');
-        $etudiant->Sexe = $request->input('sexe'); // Assurez-vous de spécifier une valeur pour chaque colonne non nullable
+        $etudiant->Sexe = $request->input('sexe'); 
         $etudiant->Email = $request->input('email');
-        $etudiant->Password = Hash::make($request->input('password')); // Assurez-vous de hasher le mot de passe
+        $etudiant->Password = Hash::make($request->input('password'));
         $etudiant->Age = $request->input('age');
         $etudiant->Groupe = $request->input('grp');
         if ($request->hasFile('img')) {

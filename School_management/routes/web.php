@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\AddNote;
 use App\Http\Controllers\HomeEtudiantController;
 
-
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ExamController;
 use App\Http\Controllers\ExamenController;
@@ -15,7 +14,6 @@ use App\Http\Controllers\Exams;
 use App\Http\Controllers\MessageProfController;
 use App\Http\Controllers\MessageSecretaryController;
 use App\Http\Controllers\NoteController;
-use App\Http\Controllers\AbsenceController;
 use App\Http\Controllers\addAbsence;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\EtudiantCont;
@@ -141,7 +139,7 @@ Route::get('/ContactForAdmin', function(){
     return view('admin.ContactAdmin.index');
 })->name('ContactForAdmin');
 
-Route::get('/absences/{id}',[AbsenceController::class,'getAbsence'])->name('Absences');
+Route::get('/absences/{id}',[Absence::class,'show'])->name('Absences');
 //-----------------------------hraph-------------------------------
 
 

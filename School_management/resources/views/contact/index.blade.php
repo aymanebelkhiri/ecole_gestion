@@ -98,7 +98,7 @@
 <br>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="submit" value="Send Message" class="btn btn-primary">
+                                                    <input type="submit" value="Send Message" class="btn btn-dark">
                                                     <div class="submitting"></div>
                                                 </div>
 												<br>

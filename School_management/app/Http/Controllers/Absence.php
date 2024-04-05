@@ -31,16 +31,14 @@ class Absence extends Controller
      */
     public function store(Request $request)
     {
-        // Création d'une nouvelle note avec les données validées
         $Absence = new Absence_etudiant();
         $Absence->MasseHoraire= strip_tags($request->input("heures"));
         $Absence->module= strip_tags($request->input("module"));
         $Absence->Etudiant= strip_tags($request->input("etudiant"));
-        // Enregistrement de la note dans la base de données
         $Absence->save();
         $et=Etudiant::findOrFail($Absence->Etudiant);
         Mail::to($et->Email)->send(new MailAbsence());
-        // Redirection de l'utilisateur avec un message de succès et la requête
+
         return view('prof.EtudiantAbsence',[
             'success' => 'Absence    added successfully.',
             'data' => $request->all()
@@ -52,7 +50,14 @@ class Absence extends Controller
      */
     public function show(string $id)
     {
-        //
+        try {
+            $Absences =Absence_etudiant::where(["Etudiant"=>auth()->user()->id])->get();
+            return view('etudiant.Absence',compact('Absences'));
+           
+        } catch (\Throwable $th) {
+            return view('etudiant.Absence');
+           
+        }
     }
 
     /**
@@ -62,8 +67,8 @@ class Absence extends Controller
     {
         $array = explode('*', $id);
     
-        $id_abs = $array[0];  // Note ID
-        $grp = $array[1];   // Module
+        $id_abs = $array[0];  
+        $grp = $array[1];   
 
         return view("prof.edit_absence",[
             
@@ -96,8 +101,8 @@ class Absence extends Controller
     {
         $array = explode('*', $id);
     
-        $id_abs = $array[0];  // Note ID
-        $grp = $array[1];   // Module
+        $id_abs = $array[0];  
+        $grp = $array[1];   
         $data=array();
         $data["grp"]=$grp;
     
