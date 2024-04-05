@@ -73,8 +73,8 @@
       </div>
     </div>
   </section>
+<div style="background-color: black" class="mt-1 pt-5">
 
-  {{-- <section class="section why-us" data-section="section2">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -130,7 +130,8 @@
         </div>
       </div>
     </div>
-  </section>
+    <br><br><br><br>
+  </div>
 
   <section class="section coming-soon" data-section="section3">
     <div class="container">
@@ -189,7 +190,7 @@
     </div>
   </section>
 
-  <section class="section courses" data-section="section4">
+  <section class="section lol text-white mt-1 pt-5" style="background-color: black" data-section="section4">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -354,9 +355,8 @@
       </div>
     </div>
   </section>
-  
 
-  <section class="section video" data-section="section5">
+  <section class="mt-1 pt-5 text-white" style="background-color: black" data-section="section5">
     <div class="container">
       <div class="row">
         <div class="col-md-6 align-self-center">
@@ -382,7 +382,7 @@
     </div>
   </section>
 
-  <section class="section contact" data-section="section6">
+  <section class="mt-1 pt-5  pb-5" style="background-color: black" data-section="section6">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -403,6 +403,6 @@
         </div>
       </div>
     </div>
-  </section> --}}
+  </section>
 
 @endsection
