@@ -18,8 +18,8 @@ return new class extends Migration
             $table->timestamps();
 
             // Ajout des clés étrangères
-            $table->foreign('id_prof')->references('id_prof')->on('profs');
-            $table->foreign('id_filiére')->references('id')->on('filiéres');
+            $table->foreign('id_prof')->references('id_prof')->on('profs')->onDelete('cascade');
+            $table->foreign('id_filiére')->references('id')->on('filiéres')->onDelete('cascade');
         });
     }
 

@@ -115,7 +115,7 @@ class EtudiantCont extends Controller
     $user->email = strip_tags($request->input("email"));
     $user->save();
 
-    Mail::to($Etudiant->Email)->send(new editetudiant());
+    // Mail::to($Etudiant->Email)->send(new editetudiant());
 
     return view("admin.etudiants.liste", ['data' => $request->input(), "success" => "Student Edited Successfully."]);
 }

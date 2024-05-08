@@ -23,7 +23,7 @@ return new class extends Migration
             $table->integer('Age');
             $table->string('photo');
             $table->unsignedBigInteger('Groupe');
-            $table->foreign('Groupe')->references('id_groupe')->on('groupes')->cascadeOnDelete();
+            $table->foreign('Groupe')->references('id_groupe')->on('groupes')->onDelete('cascade');
             $table->timestamps();
         });
     }

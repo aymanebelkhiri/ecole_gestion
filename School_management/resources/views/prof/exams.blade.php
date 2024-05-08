@@ -138,7 +138,6 @@ try {
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Exams</h6>
                         
-                        <a href="">Show All</a>
                     </div>
                     @if($success)
                         <div class="alert alert-success ">

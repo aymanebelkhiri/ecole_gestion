@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('Nom');
             $table->integer('Effectif');
             $table->unsignedBigInteger('Filiére');
-            $table->foreign('Filiére')->references('id')->on('filiéres')->cascadeOnDelete();
+            $table->foreign('Filiére')->references('id')->on('filiéres')->onDelete('cascade');
             $table->timestamps();
         });
     }

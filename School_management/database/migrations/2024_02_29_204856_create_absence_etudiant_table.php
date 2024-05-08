@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('absence_etudiant', function (Blueprint $table) {
+        Schema::create('absence_etudiants', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->integer('MasseHoraire');
-            $table->unsignedBigInteger('Etudiant');
-            $table->foreign('Etudiant')->references('id_etudiant')->on('etudiants')->cascadeOnDelete();
-            $table->date('Date');
-            $table->boolean('Justifiée');
+            $table->string('module');
+            $table->unsignedBigInteger('id_etudiant');
+            $table->foreign('id_etudiant')->references('id_etudiant')->on('etudiants')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('absence_etudiant');
+        Schema::dropIfExists('absence_etudiants');
     }
 };

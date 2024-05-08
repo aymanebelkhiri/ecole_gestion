@@ -23,9 +23,9 @@ return new class extends Migration
             $table->timestamps();
 
             // Define foreign key constraints
-            $table->foreign('module')->references('id_module')->on('modules')->cascadeOnDelete();
-            $table->foreign('filiere')->references('id')->on('filiéres')->cascadeOnDelete();
-            $table->foreign('prof')->references('id_prof')->on('profs')->cascadeOnDelete();
+            $table->foreign('module')->references('id_module')->on('modules')->onDelete('cascade');
+            $table->foreign('filiere')->references('id')->on('filiéres')->onDelete('cascade');
+            $table->foreign('prof')->references('id_prof')->on('profs')->onDelete('cascade');
         });
     }
 

@@ -12,7 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('notes', function (Blueprint $table) {
-            $table->string('Valeur');
+            $table->id('id_note');
+            $table->string('Title');
+            $table->decimal('Valeur',10,2);
+            $table->unsignedBigInteger('Etudiant');
+            $table->unsignedBigInteger('Module');
+
+            $table->foreign('Etudiant')->references('id_etudiant')->on('etudiants')->onDelete('cascade');
+            $table->foreign('Module')->references('id_module')->on('modules')->onDelete('cascade');
             $table->timestamps();
         });
     }

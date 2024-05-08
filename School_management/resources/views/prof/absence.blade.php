@@ -164,7 +164,6 @@ try {
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Absence</h6>
                         
-                        <a href="">Show All</a>
                     </div>
                     @if(isset($success))
                     <div class="alert alert-success">

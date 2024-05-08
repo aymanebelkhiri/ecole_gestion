@@ -80,7 +80,7 @@
                     </div>
                     <div class="ms-3">
                         <h6 class="mb-0">{{$prof->Nom}}</h6>
-                        <span>Student</span>
+                        <span>Teacher</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
@@ -142,7 +142,7 @@
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Personal Information</h6>
-                        <a href="">Show All</a>
+                     
                     </div>
                     <div class="table-responsive row">
                         <table class='table  table-hover '>

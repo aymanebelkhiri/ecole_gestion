@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('filiéres', function (Blueprint $table) {
             $table->id('id');
             $table->string('Nom');
+            $table->string('photo');
             $table->string('Domaine');
             $table->text('Description');
             $table->timestamps();

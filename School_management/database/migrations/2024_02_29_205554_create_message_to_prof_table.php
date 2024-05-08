@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('message_to_prof', function (Blueprint $table) {
             $table->text('Message');
             $table->unsignedBigInteger('Etudiant');
-            $table->foreign('Etudiant')->references('id_etudiant')->on('etudiants')->cascadeOnDelete();
+            $table->foreign('Etudiant')->references('id_etudiant')->on('etudiants')->onDelete('cascade');
             $table->unsignedBigInteger('Prof');
-            $table->foreign('Prof')->references('id_prof')->on('profs')->cascadeOnDelete();
+            $table->foreign('Prof')->references('id_prof')->on('profs')->onDelete('cascade');
             $table->timestamps();
         });
     }

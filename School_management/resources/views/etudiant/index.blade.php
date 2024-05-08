@@ -152,7 +152,7 @@
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Personal Information</h6>
-                        <a href="">Show All</a>
+                      
                     </div>
                     <div class="table-responsive row">
                         <table class='table  table-hover '>

@@ -17,11 +17,10 @@ return new class extends Migration
             $table->string('Prenom');
             $table->string('Email');
             $table->string('Sexe');
-            $table->string('photo')->nullable();
             $table->string('Password');
 
             $table->unsignedBigInteger('Module');
-            $table->foreign('Module')->references('id_module')->on('modules')->cascadeOnDelete();
+            $table->foreign('Module')->references('id_module')->on('modules')->onDelete('cascade');
             $table->timestamps();
         });
     }

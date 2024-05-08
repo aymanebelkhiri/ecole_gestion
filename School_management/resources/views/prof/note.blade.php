@@ -163,7 +163,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Marks</h6>
                         
-                        <a href="">Show All</a>
+
                     </div>
                     @if(session('success'))
                         <div class="alert alert-success">
