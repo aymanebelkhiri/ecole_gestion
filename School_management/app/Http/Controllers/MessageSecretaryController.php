@@ -25,10 +25,10 @@ class MessageSecretaryController extends Controller
             'Message'=>$request->message,
             'Etudiant'=>Auth::user()->id
         ]);
-        $admins=Admin::all();
-        foreach($admins as $admin){
-        Mail::to($admin->Email)->send( new message());
-        }
+        // $admins=Admin::all();
+        // foreach($admins as $admin){
+        // Mail::to($admin->Email)->send( new message());
+        // }
     if($Message){
         $MessageSucces = 'Message sent successfully';
         return view('etudiant.FormSecrtary',compact('MessageSucces'));

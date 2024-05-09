@@ -36,7 +36,6 @@ class ModuleController extends Controller
             'nom' => 'required',
             'MasseH'=>'required',
             'Coefficient'=>'required',
-            'desc'=>'required',
             'filiére'=>'required',
         ]);
         
@@ -46,14 +45,14 @@ class ModuleController extends Controller
             'Nom'=>$request->nom,
             'MasseHoraire'=>$request->MasseH,
             'Coefficient'=>$request->Coefficient,
-            'description'=> $request->desc,
             'Filiére'=>$FiliéreId
         ]);
     
         if($Module){
-            return redirect()->route('modules.index')->with('success', 'Étudiant ajouté avec succès');
+            return redirect()->route('modules.index')->with('success', 'Course added succesfully');
         }else{
-            return view('admin.modules.create');
+            $echec= 'Failed to add the course';
+            return view('admin.modules.create',compact('echec'));
         }
     }
 

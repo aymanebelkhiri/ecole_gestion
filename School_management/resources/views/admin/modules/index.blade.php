@@ -74,8 +74,8 @@ try {
                 </div>
                 <div class="navbar-nav w-100">
                 <a href="{{route('filiéres.index')}}" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Branchs</a>
-                    <a href="{{route('modules.index')}}" class="nav-item nav-link " ><i class="fa fa-laptop me-2"></i>Courses</a>
-                    <a href="{{route('groupes.index')}}" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>Groups</a>
+                    <a href="{{route('modules.index')}}" class="nav-item nav-link active " ><i class="fa fa-laptop me-2"></i>Courses</a>
+                    <a href="{{route('groupes.index')}}" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Groups</a>
                     <a href="{{route('profs.index')}}" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Teachers</a>
                     <a href="{{route('addEtudiant')}}" class="nav-item nav-link "><i class="fa fa-table me-2"></i>Students</a>
                     <a href="{{route('events.index')}}" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Events</a>
@@ -131,7 +131,6 @@ try {
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Module</h6>
                         
-                        <a href="">Show All</a>
                     </div>
                     @if(isset($success))
                         <div class="alert alert-success">

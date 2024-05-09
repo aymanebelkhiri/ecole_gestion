@@ -159,3 +159,7 @@ Route::resource('coursesAd', CourseAdController::class);
 Route::get('/info',function(){
     return view('info'); 
 })->name('inf');
+
+Route::get('/About',function(){
+    return view('DiscoverMore');
+})->name('about');

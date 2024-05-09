@@ -159,7 +159,6 @@
                                     <th scope="col"><input class="form-check-input" type="checkbox"></th>
                                     <th scope="col">Module</th>
                                     <th scope="col">Teacher</th>
-                                    <th scope="col">Major</th>
                                     <th scope="col">Room Number</th>
                                     <th scope="col">Day</th>
                                     <th scope="col">Start Time</th>
@@ -172,13 +171,11 @@
                                 <tr>
                                     <td><input class="form-check-input" type="checkbox"></td>
                                     <td>{{ $emp->module }}</td>
-                                    <td>{{ $emp->filiere }}</td>
+                                    <td>{{ $emp->prof }}</td>
                                     <td>{{ $emp->salleNum }}</td>
                                     <td>{{ $emp->day }}</td>
                                     <td>{{ $emp->startTime }}</td>
                                     <td>{{ $emp->endTime }}</td>
-
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 @endforeach
                 

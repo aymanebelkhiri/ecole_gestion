@@ -14,10 +14,10 @@
 
       <div class="video-overlay header-text">
           <div class="caption">
-              <h6>Graduate School of Management</h6>
-              <h2><em>Your</em> Classroom</h2>
+              <h6>Inspiring Minds, Shaping Futures</h6>
+              <h2><em>Your Journey</em> Begins at ISGI</h2>
               <div class="main-button">
-                  <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
+                  <div class="scroll-to-section"><a href="#section2">About ISGI</a></div>
               </div>
           </div>
       </div>

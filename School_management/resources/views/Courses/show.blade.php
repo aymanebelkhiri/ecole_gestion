@@ -23,7 +23,7 @@
         <div class="container mt-5 card-body">
             <center>
                 <h1>{{ $course->Nom }}</h1>
-            <img src="{{ asset("storage/". $course->photo) }}" width="100%" height="500px" alt=""><br><br>
+            <img src="{{ asset('storage/'. $course->photo) }}" width="100%" height="500px" alt=""><br><br>
                 <p>{{ $course->Description }}</p>
             </center>
 

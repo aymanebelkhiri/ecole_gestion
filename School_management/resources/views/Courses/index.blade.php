@@ -19,7 +19,7 @@
 
 <div class="container total">
     <center>
-        <h1>Courses</h1>
+        <h1>Branchs</h1>
     </center>
     <br>
     <div class="row">

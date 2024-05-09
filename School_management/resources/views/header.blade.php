@@ -188,15 +188,15 @@ https://templatemo.com/tm-557-grad-school
   <!--header-->
   <header class="main-header clearfix" role="header">
     <div class="logo">
-      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24" style="margin-top: -10px"><path fill="#EB1616" d="m12 21l-7-3.8v-6L1 9l11-6l11 6v8h-2v-6.9l-2 1.1v6zm0-8.3L18.85 9L12 5.3L5.15 9zm0 6.025l5-2.7V12.25L12 15l-5-2.75v3.775zm0-3.775"/></svg> <em> IS</em>GI</a>
+      <a href="{{route('home')}}"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24" style="margin-top: -10px"><path fill="#EB1616" d="m12 21l-7-3.8v-6L1 9l11-6l11 6v8h-2v-6.9l-2 1.1v6zm0-8.3L18.85 9L12 5.3L5.15 9zm0 6.025l5-2.7V12.25L12 15l-5-2.75v3.775zm0-3.775"/></svg> <em> IS</em>GI</a>
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
-        <li><a href="{{route('home')}}" class="external">Home</a></li>
+        <li><a href="{{route('courses')}}" class="external">DISCOVER ALL BRANCHS</a></li>
 
-        <li><a href="{{route('Contact')}}" class="external">Contact</a></li>
-        <li><a href="{{ route('courses') }}" class="external">Discover all Courses</a></li>
+        <li><a href="{{route('about')}}" class="external">ABOUT ISGI</a></li>
+        <li><a href="{{ route('Contact') }}" class="external">CONTACT</a></li>
         @if (Route::has('login'))
             
                 @auth
